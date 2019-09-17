@@ -1,0 +1,234 @@
+.text-response {
+    border: 0;
+    border: 1px solid silver;
+    border-radius: 3px;
+    transition: all 0.3s;
+    background-color: white;
+    width: 100%;
+
+    font-family: var(--font3);
+    font-size: var(--small);
+    outline: none;
+    resize: none;
+    text-align: center;
+    overflow: visible;
+    margin: 20 auto;
+
+    text-align: justify;
+    -moz-text-align-last: center; /* Firefox 12+ */
+    text-align-last: center;
+    padding: 5px;
+}
+
+.quiz_card > img {
+    height: 100%;
+    padding: 0px;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.img_btn {
+    border: solid 3px black;
+    box-shadow: var(--shadow-depth) var(--shadow-depth) ;
+    border-radius: 7px;
+    padding: 2px;
+    margin: 4px;
+}
+
+.quiz_option {
+    color: rgba(1, 1, 1, 0.4);
+    border: solid 3px rgba(1, 1, 1, 0.3);
+    border-radius: 7px;
+    padding: 2px;
+    margin: 2px;
+    font-family: var(--font1);
+    font-size: var(--small);
+    display: inline-block;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    overflow: hidden;
+    box-shadow: var(--shadow-depth) var(--shadow-depth) ;
+    width: 130px;
+}
+
+.quiz_option label {
+    font-size: 4vw;
+}
+
+
+.card-response {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: center;
+
+    /* SHOW ALL CARDS 1/3 */
+    justify-content: center;
+
+    /* HORIZ SCROLL 1/3 */
+    /*
+    overflow-x: scroll;
+    flex-direction: column;
+    height: 50vh;
+    */
+}
+
+.quiz_card {
+    padding: 0%;
+    max-height: 300px;
+
+    /* SHOW ALL CARDS 2/3 */
+    width: 45%;
+    height: 40vh;
+
+    /* HORIZ SCROLL 2/3 */
+    /*
+    width: 30%;
+    height: 45%;
+    */
+}
+
+.grid-response {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    border-radius: 3px;
+}
+
+.grid-response > label {
+    width: 30vw;
+    font-size: 3vw;
+}
+
+/* INTL TEL INPUT */
+.form-control {
+    font-size: var(--small) !important;
+}
+
+.extra-detail {
+    max-width: 400px;
+}
+
+.field-caption {
+    position: absolute;
+    font-size: 10px;
+    text-decoration: underline;
+    transform: translateY(40px) translateX(3px);
+    cursor: pointer;
+}
+
+.form-title, .form-caption {
+    box-shadow: none;
+}
+
+.height-field-label {
+    padding-left: 10px;
+    position: absolute;
+    transform: translateY(10px) translateX(250px)
+}
+
+.height-field {
+    display: flex;
+    box-shadow: var(--shadow);
+    margin: 10px 0;
+}
+
+.height-field-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    box-shadow: none;
+}
+
+.height-field-container > input {
+    
+}
+
+.text-btn {
+    width: auto !important;
+    font-size: 16px;
+    font-family: var(--font2);
+    margin: 7px;
+    padding: 5px;
+    border-radius: var(--border-radius);
+    min-width: 50px !important;
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 35px;
+    margin: 3px 0;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: var(--font1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    border: 2px solid black;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    margin-right: 5px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-label:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-label input:checked ~ .checkmark {
+    background-color: var(--green);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

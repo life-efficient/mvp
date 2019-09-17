@@ -1,0 +1,45 @@
+:root {
+    --time: 100s;
+    --w: 1000px;
+}
+
+.testimonial-marquee {
+    height: 40vh;
+    display: flex;
+    width: 100% !important;
+
+    align-content: center;
+    margin: 10px;
+    max-width: 100% !important;
+    justify-content: left;
+}
+
+.marquee-testimonial {
+    opacity: 0.9;
+    max-height: 100%;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: auto 5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.marquee-testimonial:hover {
+    opacity: 1;
+}
+
+.toLeft {
+    -moz-animation: toLeft var(--time) linear infinite;
+    -webkit-animation: toLeft var(--time) linear infinite;
+    animation: toLeft var(--time) linear infinite;
+}
+
+.toRight {
+    -moz-animation: toRight var(--time) linear infinite;
+    -webkit-animation: toRight var(--time) linear infinite;
+    animation: toRight var(--time) linear infinite;
+}
+
+/* SLIDING ANIMATIONS ARE DEFINED IN THE PRODUCTMARQUEE.CSS FILE*/

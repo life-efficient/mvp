@@ -1,0 +1,37 @@
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    --icon-height: 5vh;
+    height: var(--tab-height);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: var(--primary);
+    lbackground-image: url('../images/gradient.png');
+    background-size: 100vw var(--navbar-height);
+}
+
+.tabs > * {
+    box-sizing: border-box;
+    font-family: var(--font1);
+    font-size: 1vh;
+    color: var(--secondary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: inherit;
+    width: 50vw;                /* oversized squashes tab down to equal divisions */
+    max-width: 200px;
+    white-space: nowrap;
+}
+
+.tab-icon {
+    height: var(--icon-height);
+    width: var(--icon-height);
+}
+
+.tab-title {
+    color: var(--secondary);
+}

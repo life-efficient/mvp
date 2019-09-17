@@ -1,0 +1,80 @@
+/* #password {
+}
+
+.navbar {
+    position: absolute;
+}
+
+.login-container {
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+*/
+
+#passwordShow {
+    --dim: 40px;
+    width: var(--dim);
+    height: var(--dim);
+    min-height:var(--dim);
+    min-width: var(--dim);
+    margin: auto;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: center;
+    padding: 0;
+}
+
+/*
+.login-panel {
+    background-color: var(--secondary);
+    background-color: white;
+    padding: 5vw 5vw;
+    margin: auto;
+    border-radius: 6px;
+    width: 90vw;
+    max-width:1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 80vh;
+}
+
+.login-field {
+    padding: 2vh;
+    margin: auto;
+    font-size: 20px;
+}
+
+.field-title {
+    text-align: left;
+} */
+
+.main-logo {
+    --logo-dim: 150px;
+    height: var(--logo-dim);
+    width: var(--logo-dim);
+    max-height: 300px;
+    margin: 20px auto;
+}
+
+.password-input {
+  display: flex;
+}
+
+.form-error {
+    box-shadow: none;
+    color: red;
+}
+
+.get-details {
+    box-shadow: none;
+    font-size: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+.display-pic {
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.dp-input {
+    cursor: pointer;
+}
+
+.dp-input :hover {
+    opacity: 0.5;
+}
+
+
+.dp-container {
+    border-radius: 50vw;
+    height: 50vw;
+    width: 50vw;
+    max-height: 300px;
+    max-width: 300px;
+    margin: 30px auto;
+    overflow: hidden;
+}

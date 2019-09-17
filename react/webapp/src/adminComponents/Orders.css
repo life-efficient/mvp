@@ -1,0 +1,32 @@
+.orders-brand {
+    cursor: pointer;
+    background-color: var(--nude);
+    flex-direction: column;
+}
+
+.order-item {
+    background-color: var(--primary);
+    background-size: 100vw 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 2px auto;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    border-radius: var(--border-radius);
+    color: var(--secondary);
+}
+
+.order-content {
+    padding: 0 20px;
+}
+
+.ordered {
+    
+}
+
+.order-item > img {
+    max-width: 200px;
+    width: 20vw;
+    border-radius: var(--border-radius);
+}

@@ -1,0 +1,36 @@
+.recommendation {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.recommendation > img {
+    max-height: 100%;
+}
+
+.recommendation > button {
+    margin: auto 20px;
+}
+
+.unreject {
+    height: 40px;
+    border: solid black 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rec-rejection {
+    justify-content: space-around;
+    color: rgba(141, 1, 1, 0.8)
+}
+
+.rec-response {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    padding: 30px;  
+    width: 200px;
+    float: right;
+    color: var(--primary);
+}

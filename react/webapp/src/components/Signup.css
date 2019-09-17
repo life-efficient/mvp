@@ -1,0 +1,141 @@
+.slide1 {
+
+}
+
+.form-container {
+    border-radius: 3px;
+    flex-wrap: wrap;
+    background-color: var(--primary);
+    padding-top: 10px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#signup-bar {
+    flex-direction: row;
+}
+
+@media (max-width: 700px) {
+    #signup-bar {
+        max-width: 300px;
+    }
+}
+
+.form-container > * {
+    margin: 20px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: var(--shadow);
+    border: 0;
+    color: var(--secondary);
+    font-family: var(--font2);
+}
+
+.signup-name {
+    padding: 5px;
+}
+
+.signup-bar > * {
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.field-title {
+    float: left;
+    position: absolute;
+    transform: translateY(-18px);
+    text-align: left;
+}
+
+.long-field-title {
+    margin-top: 40px;
+}
+.long-field-title > .field-title {
+    transform: translateY(-57px);
+}
+
+.form-entry {
+    font-family: var(--font2);
+}
+
+.already-signed-up {
+    position: absolute;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.slide {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 1s;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.slide-container {
+    display: flex;
+    max-width: none !important;
+    height: 100%;
+}
+
+.back {
+    height: 10px;
+    font-family: var(--font2);
+    margin: 10px;
+    font-size: 30px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    border: 3px solid black;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transform: rotate(180deg);
+    position: absolute;
+
+}
+
+.page_back {
+    left: 0px;
+    transform: translateY(8vh) rotate(180deg);
+;
+    z-index: 12;
+}
+
+.back_slide {
+    left: -10px;
+    top: -40px;
+}
+
+.invalid-input {
+    animation: shake 1s ease-in-out 0s infinite;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-3px, 0, 0);
+    box-shadow: 3px 3px 2px red;
+  }
+
+  40%, 60% {
+    transform: translate3d(3px, 0, 0);
+    box-shadow: 3px 3px 2px red;
+  }
+}

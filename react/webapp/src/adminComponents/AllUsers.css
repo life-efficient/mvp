@@ -1,0 +1,20 @@
+.prioritise {
+    background-color: var(--red);
+    float: right;
+    position: relative;
+}
+
+.user {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--primary);
+    color: var(--secondary) !important;
+    max-width: 600px;
+    padding: 10px;
+    margin: 2px auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+}

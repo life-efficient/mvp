@@ -1,0 +1,15 @@
+.SlideUpPanel {
+    background-color: var(--green);
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+    bottom: 0vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    transition: 1s;
+}
+
+.slideUp-content {
+    width: 100%;
+}

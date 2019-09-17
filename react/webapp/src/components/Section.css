@@ -1,0 +1,54 @@
+.section {
+    lbackground-image: url('../images/gradient.png');
+    background-color: var(--primary);
+    background-size: 100vw 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 2px auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    animation: slide-in 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0vw)
+    }
+}
+
+@media (min-width: 600px) {
+    .section {
+        border-radius: 10px;
+        /* border: 2px solid black; */
+        margin-bottom: 10px;
+    }
+}
+
+.section > div {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.section-title {
+    font-size: var(--small);
+    font-family: var(--font2);
+}
+
+.section-caption {
+    font-size: var(--small);
+    font-family: var(--font3);
+}
+
+.section > img {
+    height: 3vh;
+    display: inline;
+}
+
+@media (min-width: 800px) {
+}

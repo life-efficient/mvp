@@ -1,0 +1,226 @@
+.signup-panel {
+    top: 100px;
+    margin: 4vh auto;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    background-color: whitesmoke;
+    lborder: 2px solid #f4f4f4;
+    lbox-shadow: #f4f4f4 3px 6px;
+    lbackground-image: url('../images/silver.png');
+    background-color: var(--tertiary);
+}
+
+.ask {
+    margin: 0 auto;
+    font-family: var(--font2);
+    padding: 5px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.question > * {
+    width: 100%;
+}
+
+.question:last-child {
+    margin-bottom: 0;
+}
+
+#request {
+    height: 10vh;
+    min-height: 50px;
+    white-space: initial;
+}
+
+.main_button {
+    display: inline-block;
+    max-width: 1000px;
+    min-width: 260px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 3vh;
+    font-size: 35px;
+}
+
+#submit-2 {
+    font-size: 25px;
+}
+
+.phone_input {
+    width: 100%;
+}
+
+input {
+    border-radius: 0;
+}
+
+textarea {
+    min-height: 5vh;
+    border-radius: 0;
+}
+
+.radio_btn:checked + .quiz_option {
+    color: black;
+    border: solid 3px black;
+    animation-name: button_press;      /* this is the animation for quiz choice buttons*/
+    animation-duration: 0.5s;
+}
+
+@keyframes button_press {
+  50% {
+    transform: translateX(var(--shadow-depth)) translateY(var(--shadow-depth));
+    box-shadow: 0px 0px black;
+  }
+}
+
+
+/*------------- INT TEL STUFF-----------*/
+#phone_number {
+    width: 100%;
+}
+
+.form-control {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-bottom: solid black 2px !important;
+    font-size: 3vw !important;
+    width: 100% !important;
+}
+
+.flag-dropdown {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+.flag-dropdown > * {
+    border: 0 !important;
+}
+
+.selected-flag  {
+    background-color: transparent !important;
+    box-sizing: none;
+}
+
+.country-list {
+    width: 60vw !important;
+    max-width: 200px;
+    font-size: 3vw;
+    justify-content: flex-start !important;
+}
+
+.country {
+    height: 8vw !important;
+    padding: 0px !important;
+}
+
+.react-tel-input {
+    width: 100% !important;
+    z-index: 1;    
+}
+
+.react-tel-input > * {
+    border-radius: 0px !important;
+}
+
+button {
+    animation-duration: 0s;
+}
+/*------------------------
+@media (min-width: 480px) {
+    .container {
+        margin-top: var(--desktop-navbar-height)
+    }
+    .ask {
+        margin: 3px;
+        width: auto;
+    }
+    
+    .quiz_option {
+        font-size: 2vw;
+        padding: 0px;
+    }
+
+    .main_button {
+        lfont-size: 1.5vw;
+        width: 40%;
+        padding: 7px;
+    }
+}
+
+
+@media (min-width: 400px) {
+    .quiz_card {
+        max-height: 600px;
+        height: 30vw;
+        width: 13vw;
+    }
+
+    .ask {
+        margin: 3px;
+        width: auto;
+    }
+
+    .subheading {
+    }
+
+    .container {
+        align-items: center;
+        top: calc(var(--desktop-navbar-height) * -1);
+    }
+
+    .question {
+        lwidth: 50vw;
+        align-items: center;
+    }
+
+    .main_button {
+        lfont-size: 1.5vw;
+        padding: 7px;
+    }
+
+    .react-tel-input{
+        width: 60% !important;
+    }
+
+    .form-control {
+        font-size: 1vw !important;
+    }
+
+    .quiz_option {
+        font-size: 1vw;
+        padding: 0px;
+    }
+
+    #submit-2 {
+        font-size: 1.5vw;
+    }
+
+    .country-list {
+        font-size: 2vw;
+    }
+}
+*/
+
+/* ANYTHING NOT MOBILE */
+@media (min-width: 1125px) {
+    .signup-panel {
+        width: 60vw;
+    }
+}

@@ -1,0 +1,40 @@
+.styleboard_upload {
+    bottom: 2vh;
+    margin: auto !important;
+    width: 60vw;
+    left: 20vw;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#styleboards {
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+
+.column {
+    width: 200px;
+    margin: 2.5px;
+}
+
+.column > img {
+    width: 200px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.empty-styleboard-prompt {
+    max-width: 500px;
+    font-family: var(--font3);
+}
+
+.empty-styleboard-prompt > * {
+    margin-bottom: 100px;
+}

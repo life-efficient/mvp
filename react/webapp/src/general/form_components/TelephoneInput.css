@@ -1,0 +1,57 @@
+.tel-field {
+    padding: 0 !important;
+    display: flex;
+
+}
+
+.tel-field > * {
+    padding: 5px;
+}
+
+.tel-input {
+    border: 0;
+    margin:0 !important;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 3px;
+    width: 190px;
+}
+
+.tel-code {
+    background-color: transparent;
+    border-right: inherit;
+    box-sizing: border-box;
+    color: var(--secondary);
+    display: flex;
+    overflow: hidden;
+    width: 100px;
+}
+
+.dropdownArrow {
+    height: 10px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.country-dropdown {
+    width: 80px !important;
+    position: absolute;
+    transform: translateY(35px);
+    max-height: 300px;
+    box-sizing: border-box;
+    padding: 0px;
+    color: var(--secondary);
+    z-index: 10;
+}
+
+.country-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 8px;
+    border: 1px solid black;
+}

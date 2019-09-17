@@ -1,0 +1,11 @@
+.dropdown-options {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+}
+
+.dropdown-option {
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}

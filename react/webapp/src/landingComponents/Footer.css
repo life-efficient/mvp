@@ -1,0 +1,17 @@
+.landing-footer {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.landing-footer > * {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 100%;
+}

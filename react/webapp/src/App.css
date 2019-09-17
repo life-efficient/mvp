@@ -1,0 +1,216 @@
+:root {
+  /* COLORS */
+  --purple: #fee2f8;
+  --violet:#ad82ce;
+  --blue:#8daae0;
+  --cream: #fff1d0;
+  --grey: grey;
+  --green: rgb(124, 194, 124);
+  --red: rgb(243, 89, 89);
+  --orange: #ff9933;
+  --nblue: #0066ff;
+  --white: white;
+  --beige: #e1c699;
+  --black: black;
+  --nude: #ebc8b2;
+  --nude: #fbf0d9;
+  --navy: #1E144D;
+  --coral: #ff7b67;
+
+  --nude: #FFFFFF;
+  --lilac: #BCA2F2;
+  --green: #89C497;
+  --pink: #FFC8DB;
+  --orange: #EA653C;
+  --blue: #C6E0F5;
+  --grey: #707070;
+  --navy: #1E144D;
+
+  --gradient-url: url('/images/gradient.png');
+
+  /* BKGD */
+  --primary: white;
+  --secondary: black;
+  /* --secondary: white; */
+  --tertiary: var(--black);
+
+  /* FONTS */
+  --font1: "Titling Gothic FB Wd Bd";
+  --font2: 'Archivo Black';
+  --font3: montserrat;
+  --font3: poppins;
+
+  --title-font: var(--font1);
+  --primary-font: var(--font2);
+  --secondary-font: var(--font3);
+
+  /* FONT SIZING */
+
+  --large: 48px;
+  --medium: 24px;
+  --small: 16px;
+  --large-desktop: 40px;
+  --medium-desktop: 24px;
+  --small-desktop: 10px;
+  --nav-item-size: 5vw;
+
+  /* MISC */
+  text-align: center;
+  --shadow-depth: 4px;
+  --border-radius: 5px;
+
+  --navbar-height: 8vh;
+  --tab-height: 8vh;
+
+  --desktop-navbar-height: 8vh;
+
+  /* BLURRED SHADOW FOR CONTRAST OF ELEMENTS AGAINST BACKGROUND */
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* DEVICE BREAKPOINTS */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 992px;
+
+}
+
+html {
+  color: var(--nude);
+  color: black;
+}
+
+a:link { color: var(--primary);text-decoration: none; }
+a​:visited { color: var(--primary); text-decoration: none;}
+a​:hover { color: var(--primary); }
+a {color: var(--primary);}
+
+button {
+  background-color: var(--primary);
+  border: 0;
+  box-shadow: var(--shadow);
+  border-radius: 3px;
+  padding: 10px;
+  font-family: var(--font2)
+}
+/* 
+@media (max-width: 600px) {
+  .large {
+    font-size: 30px !important;
+  }
+}  */
+
+.panel {
+    width: 100%;
+    background-color: var(--primary);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 3px;
+    padding: 20px;
+    color: var(--secondary);
+    position: relative;
+}
+
+.large {
+  /* font-family: var(--primary-font);
+  font-size: var(--large); */
+  font-family: var(--font1);
+  font-size: 30px;
+font-style: normal;
+font-weight: 700;
+}
+
+.medium {
+  font-family: var(--primary-font);
+  font-size: var(--medium); 
+  font-family: var(--font1) ;
+font-style: normal;
+font-weight: 700;
+}
+
+.small {
+  font-family: var(--secondary-font);
+  font-size: var(--small);
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: linear-gradient(0deg, var(--purple) 10%, var(--yellow) 90%) fixed;
+  background-color: var(--secondary);
+  z-index: -10px;
+  position: relative;
+}
+
+.App .navbar-brand {
+  font-weight: bold;
+}
+
+.radio_btn {
+  display: none;
+}
+
+button:active {
+  animation: button_press 0.3s;
+}
+
+.container {
+  margin: 0 2.5vw;
+  margin-top: var(--navbar-height);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+@keyframes button_press {
+  50% {
+    transform: translateX(var(--shadow-depth)) translateY(var(--shadow-depth));
+    transform: translateX(5px) translateY(5px);
+    box-shadow: 0px 0px black;
+  }
+  100% {
+    box-shadow: 6px 6px black;
+  }
+}
+
+/*
+
+@media (min-width: 480px) {
+  .medium{
+      font-size: var(--medium-desktop);
+  }
+
+  .small {
+      font-size: var(--small-desktop);
+  }
+
+  .container {
+    margin-top: var(--desktop-navbar-height);
+  }
+
+  .text-response {
+      font-size: var(--small-desktop);
+  }
+
+  #feedback-textbox {
+      font-size: var(--medium-desktop);
+  }
+
+  #feedback-submit {
+      font-size: var(--medium-desktop);
+  }
+
+  .sidenav a {
+      font-size: var(--small);
+  }
+}
+
+*/

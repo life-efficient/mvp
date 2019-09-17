@@ -1,0 +1,268 @@
+.index-body {
+  margin-bottom: 0 !important;
+}
+
+.index-body > * :not(.product-marquee) {
+}
+
+.first-btn {
+    margin-bottom: 36px !important;
+    width: 40vw !important;
+    position: relative;       /* necessary to contain the shine*** */
+}
+
+.shine-container {
+  padding: inherit;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+.shine {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  transform: skewX(-30deg);
+  animation: shine 3s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(80vw) skewX(-30deg);
+    background-color: rgba(0, 0, 0, 0)
+  }
+}
+
+.fold {
+    height: 80vh;
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.9)), url("../images/group.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* color: #fbf0d9; */
+    overflow-x: hidden;
+    position: relative;
+}
+
+.fold > * {
+  margin: 0 auto;
+}
+
+.index-section {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-x: hidden;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.fold-background {
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.5;
+    height: inherit;
+    width: 100vw;
+}
+
+#copy-heading {
+  margin: 30px auto;
+}
+
+#copy-subheading {
+  margin: 10px auto;
+}
+
+.lets-do-this {
+  margin: 3vw auto;
+}
+
+#first-title {
+  font-size: 60px;
+  position: absolute; top: 20px; left: 20px; text-align: left; z-index: 1;
+  transition: 0.5s;
+}
+
+@media (min-width: 550px) {
+  #first-title {
+    top: 40px;
+    left: 40px;
+  }
+}
+
+#section-2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#second-title {
+  font-family: var(--font1);
+  margin: auto;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+}
+
+#how-it-works {
+  margin: auto;
+}
+
+
+@media (min-width: 800px) {
+  #first-title {
+
+  }
+}
+
+.showcase-image {
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.showcase-image > img {
+  --delivery-image: 25vw;
+  max-height: var(--delivery-image);
+  max-width: var(--delivery-image);
+  margin: auto;
+}
+
+#phone-demo {
+  background-image: url("../images/iphone8.png");
+  --phone-height: 38vw;
+  width: 0.5*var(--phone-height);
+  height: var(--phone-height);
+  margin: 0 auto;
+  min-width: 30vw;
+}
+
+#phone-demo > video {
+  height: 75%;            /* correctly positions video on top of phone to look like bkgd*/
+}
+
+.how-it-works-step {
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.how-it-works-step > div {
+  width: 80%;
+}
+
+.icon {
+  max-height: 80px;
+}
+
+@media (max-width: 500px) {
+  .icon {
+    max-height: 40px;
+  }
+
+  .how-it-works-step > div {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  #section-2 {
+      display: initial;
+  }
+
+  #phone-demo {
+      --phone-height: 80vw;
+  }
+}
+
+#lets-do-this {
+  animation: slideOnLoad ease 1.5s 1;
+}
+
+@keyframes slideOnLoad
+{
+  0% {left:-700px;}
+  100% {left:0px;}
+}
+@-webkit-keyframes slideOnLoad
+{
+  0% {left:-700px;}
+  100% {left:-0px;}
+}
+
+.rolling-container {
+  width: 100vw;
+  margin-bottom: 50px;
+}
+
+.rolling {
+  transform: translateX(100vw);
+  animation: roll-in 2s ease-in-out 1 forwards;
+  width: 100vw;
+}
+
+.rolling2 {
+  animation-delay: 2s
+}
+.rolling3 {
+  animation-delay: 4s
+}
+.rolling4 {
+  animation-delay: 6s
+}
+.rolling5 {
+  animation-delay: 8s
+}
+
+
+.roll-child {
+}
+
+.p {
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes roll-in  {
+  0% {
+    transform: translateX(100vw)
+  }
+  100% {
+    transform: translateX(0vw)
+  }
+}
+
+.roll-out {
+  animation: roll-out 2s ease-out 1 forwards;
+}
+
+@keyframes roll-out {
+  0% {
+    transform: translateX(0vw)
+  }
+  100% {
+    transform: translateX(-100vw)
+  }
+}
