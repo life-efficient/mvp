@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { makeGetRequest } from "../api_calls"
-import Section from "../components/Section"
+import Section from "./Section"
 import { connect } from "react-redux"
 
 class Messages extends Component {

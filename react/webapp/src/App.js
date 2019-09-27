@@ -8,7 +8,6 @@ import { createStore, combineReducers } from "redux"
 import Modal from "./components/Modal"
 import AppContent from "./components/AppContent"
 import LandingContent from "./landingComponents/LandingContent"
-import AdminContent from "./adminComponents/AdminContent"
 import { ProtectedRoute, StylistProtectedRoute ,AdminProtectedRoute } from "./CustomRoutes"
 import NotFound from "./general/NotFound";
 
@@ -43,45 +42,8 @@ Amplify.configure({
     }
 });
 
-/*
-const navbarHeight = 8
-const tabHeight = 8
-const tabIconHeight= 5
-const bodyHeight = 100 - (navbarHeight + tabHeight + tabIconHeight)
-*/
 
-window.styles = [
-    'vintage',
-    // 'oversized',
-    'high-end',
-    // 'color',
-    // 'emo',
-    'basic',
-    'preppy',
-    'streetwear',
-    'boho',
-    'sporty',
-    'gothic',
-    'e-girl/boy',
-    // 'french',
-    'italian',
-    'kawaii',
-    'androgenous',
-    'punk',
-    'casual',
-    'festival',
-    'tactical',
-    'futuristic',
-    // 'sexy',
-    'chic',
-    'cute',
-    'grunge',
-    // '70s',
-    '80s',
-    '90s',
-    // 'hot',
-    // 'unique'
-]
+
 
 
 class App extends Component {
@@ -98,12 +60,8 @@ class App extends Component {
             <Router >                   
                 <div className="App">
                     <Switch>
-                        <AdminProtectedRoute path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin" component={AdminContent} />
                         <ProtectedRoute path="/app" component={AppContent}/>
-                        {/* <Route path="/whatsapp" exact component={(props) => {
-                            console.log('PROPS:', props)
-                            window.location = `https://wa.me/447388648401?text=Hey%20Adla!%0AI%20want%20your%20help%20finding%20something!%0A${props.location.request}`}
-                        }/> */}
+
                         <Route path="/" component={LandingContent} />
                         <Route component={NotFound} path=""/> 
                     </Switch>
