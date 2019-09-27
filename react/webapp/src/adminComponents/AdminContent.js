@@ -3,33 +3,14 @@ import { Route } from "react-router-dom"
 import AdminNavbar from "./Navbar"
 import SideNav from "../components/SideNav"
 import AdminRoot from "./AdminRoot"
-import ServeUsers from "./ServeUsers"
-import ServeRequest from "./ServeRequest"
-import SignUpUsers from "./SignUpUsers"
-import Segments from "./Segments"
-import AllUsers from "./AllUsers"
-import User from "./User"
 import arrow from "../images/icons/arrow.png"
-import UpdateBrands from "./UpdateBrands"
-import Messages from "./Messages"
-import Stylists from "./Stylists"
 import { AdminProtectedRoute } from "../CustomRoutes"
 import { Provider } from "react-redux"
 import { combineReducers, createStore } from "redux"
 import { makeGetRequest } from "../api_calls"
 import Modal from "../components/Modal"
 import SlideUpPanel from "../components/SlideUpPanel"
-import Broadcast from "../adminComponents/Broadcast"
-import Orders from "./Orders"
 
-const stylists = (state=[], action) => {
-    switch (action.type) {
-        case "SET_STYLISTS":
-            return action.stylists
-        default:
-            return state
-    }
-}
 
 const slideUp = (state={open: false, content: null}, action) => {
     switch (action.type) {
@@ -102,7 +83,6 @@ const sideNav = (state = {open: false}, action) => {
 }
 
 const reducer = combineReducers({
-    stylists,
     modal,
     slideUp,
     user,
@@ -112,33 +92,9 @@ const reducer = combineReducers({
 const store = createStore(reducer)
 
 const AdminRoutes = (props) => {
-
-    //  WHY DOES THIS NOT WORK OUTSIDE OF THIS COMPONENT? ERROR IS 'NO USER POOL' 
-    makeGetRequest('admin-stylists', 
-        (data) => {
-            data = data.body
-            data = JSON.parse(data)
-            console.log(data)
-            store.dispatch({type: 'SET_STYLISTS', stylists: data})
-        }
-    )
-
     return (
         <React.Fragment>
-            <Route path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin" exact component={AdminRoot} />
-            {/* <Route path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin/serve_users" exact component={ServeUsers} /> */}
-            {/* <Route path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin/serve_users/request" component={ServeRequest} /> */}
-            {/* <Route path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin/sign_up_users" exact component={SignUpUsers} /> */}
-            {/* <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/add_to_segments`} component={Segments}/> */}
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/all_users`} exact component={AllUsers}/>
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/user`} component={User}/>
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/update_brands`} component={UpdateBrands}/>
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/messages`} component={Messages}/>
-            {/* <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/messaging`} render={() => {return <div className="body"><Messaging /></div>}}/> */}
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/stylists`} component={Stylists}/>
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/stylist_broadcast`} component={Broadcast}/>
-            <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/orders`}  component={Orders}/>
-            {/* <Route path={`/5015db37-0d03-4f44-93a5-606ac215935b/admin/orders`} component={Orders}/> */}
+            <Route path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin" exact component={AdminRoot} />    
         </React.Fragment>
     )
 }

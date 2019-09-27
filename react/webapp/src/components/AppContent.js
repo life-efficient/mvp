@@ -3,21 +3,12 @@ import { Route, Redirect } from "react-router-dom"
 import Navbar from "./Navbar"
 import SideNav from "./SideNav"
 import Home from "./Home";
-import Styleboards from "./Styleboards";
-import Requests from "./Requests";
-import Request from "./Request"
-import NewRequest from "./NewRequest";
-import Recommendations from "./Recommendations"
-import Profile from "./Profile";
-import Brands from "./Brands";
 import Help from "../landingComponents/Help"
-import Swiping from "./Swiping"
 import Modal from "./Modal"
 import { combineReducers, createStore } from "redux"
 import { Provider } from "react-redux"
 import { makeGetRequest } from "../api_calls";
 import SlideUpPanel from "./SlideUpPanel";
-import MyStyle from "./MyStyle"
 
 const slideUp = (state={open: false, content: null}, action) => {
     switch (action.type) {
@@ -126,28 +117,15 @@ const AppRoutes = () => {
         <React.Fragment>
             <Route path="/app" exact render={() => <Redirect to="/app/profile" />} />
             <Route path="/app/home" exact component={Home} />
-            {/* <Route path="/app/home/styleboards" exact component={Styleboards} /> */}
-            {/* {/* <Route path="/app/home/requests" exact component={Requests} /> */}
-            {/* <Route path="/app/home/requests/request" exact component={Request} /> */}
-            {/* <Route path="/app/new_request" exact component={NewRequest} /> */}
-            {/* <Route path="/app/recommendations" exact component={Recommendations} /> */}
-            <Route path="/app/profile" exact component={Profile} />
             <Route path="/app/profile/brands" exact render={() => {return (
                 <>
                 <Navbar back={true} />
-                <div className="body" style={{backgroundColor: '#89C497'}}>
-                    <Brands/>
-                </div>
                 </>
             )}} />
-            <Route path="/app/profile/style" exact component={MyStyle} />
             <Route path="/app/profile/swipe" exact render={() => {return (
                 <>
                 <Navbar back={true} />
-                <div className="body" style={{backgroundColor: '#89C497'}}>
-                    <div className=" panel">
-                        <Swiping />
-                    </div>
+                <div className="body" style={{backgroundColor: '#89C497'}}>f
                 </div>
                 </>
             )}} />
@@ -158,7 +136,6 @@ const AppRoutes = () => {
                 <div className="body" style={{backgroundColor: '#EA653C'}}>
                     <div className="panel">
                         <div className="form-container">
-                            <NewRequest onSubmit={() => {console.log('redirecting');window.location.href = '/app'}}/>
                         </div>
                     </div>
                 </div>

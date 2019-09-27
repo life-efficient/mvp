@@ -3,7 +3,6 @@ import React, { Component } from "react"
 import "./store.css"
 import Section from "./Section"
 import Navbar from "./Navbar"
-import snoop from "../images/misc/snoop.gif"
 
 export default class Profile extends Component {
     componentDidMount = () => {
@@ -55,7 +54,6 @@ export default class Profile extends Component {
                     </strong>
                 </div>
             </div>
-            <img src={snoop} style={{position: 'absolute', bottom: '0px', height: '80px', right: '20px'}}/>
             </>
         )
     }

@@ -11,7 +11,6 @@ import LandingContent from "./landingComponents/LandingContent"
 import AdminContent from "./adminComponents/AdminContent"
 import { ProtectedRoute, StylistProtectedRoute ,AdminProtectedRoute } from "./CustomRoutes"
 import NotFound from "./general/NotFound";
-import StylistContent from "./stylistComponents/StylistContent"
 
 //Amplify.Logger.LOG_LEVEL = 'DEBUG';
 Amplify.configure({
@@ -100,7 +99,6 @@ class App extends Component {
                 <div className="App">
                     <Switch>
                         <AdminProtectedRoute path ="/5015db37-0d03-4f44-93a5-606ac215935b/admin" component={AdminContent} />
-                        <StylistProtectedRoute path ="/9j3d7w31-lfvl-98je-wewf-p1sbdhjcs636/stylist" component={StylistContent} />
                         <ProtectedRoute path="/app" component={AppContent}/>
                         {/* <Route path="/whatsapp" exact component={(props) => {
                             console.log('PROPS:', props)

@@ -19,7 +19,6 @@
     -o-transition: opacity 0.5s ease-in-out;
 }
 .modal {
-    /* background-image: url('../images/gradient.png'); */
     background-color: var(--primary);
     background-size: 100vw 100%;
     border-radius: 6px;

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import "../components/Navbar.css";
 import menu_icon from "../images/menu-logo.png"
-import logo from "../images/Adla.png"
+import logo from "../images/logo.png"
 import { connect } from "react-redux"
 import backArrow from "../images/icons/back-arrow.png"
 import { withRouter } from "react-router-dom"
@@ -58,7 +58,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import "../components/Navbar.css";
 import menu_icon from "../images/menu-logo.png"
-import logo from "../images/Adla.png"
+import logo from "../images/logo.png"
 import { connect } from "react-redux"
 
 class Navbar extends Component {

@@ -3,7 +3,6 @@
 }
 
 .navbar {
-    lbackground-image: url('../images/gradient.png');
     background-size: 100vw var(--navbar-height);
     background-color: var(--secondary);
     font-family: var(--font2);

@@ -6,7 +6,6 @@ import Help from "./Help"
 import NotFound from "../general/NotFound";
 import { combineReducers, createStore } from "redux"
 import { Provider } from "react-redux"
-import PostsByWkday from "../adminComponents/PostsByWkday"
 import Navbar from "./Navbar";
 import Tabs from "../general/Tabs"
 
@@ -99,8 +98,6 @@ const LandingRoutes = () => {
     return (
         <Switch>
           <Route path="/" exact component={Index} />
-          <Route path="/posts_by_wkday" component={PostsByWkday} />
-          <Route path={'/metrics'} component={PostsByWkday} />
           <Route path="/login" component={Login} />
           <Route path="/help" exact component={Help} />
           <Route component={NotFound} path=""/> 
@@ -109,22 +106,10 @@ const LandingRoutes = () => {
 }
 
 const LandingContent = () => {
-    var tabs = [
-        {
-            'name': 'Posting stats',
-            'to': '/posts_by_wkday'
-        },
-        {
-            'name': 'Student stats',
-            'to': '/student_stats'
-        }
-    ]
     return (
         <React.Fragment>
             <Provider store={store}>
                 <Navbar/>
-                <LandingRoutes />
-                <Tabs tabs={tabs} top={true} />
             </Provider>
         </React.Fragment>
     )

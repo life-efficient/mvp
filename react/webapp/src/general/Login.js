@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import logo from "../images/Adla.png"
+import logo from "../images/logo.png"
 import eye from "../images/see-icon.png"
 import { connect } from "react-redux"
 import { Auth } from "aws-amplify"

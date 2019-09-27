@@ -1,6 +1,4 @@
-.section {
-    lbackground-image: url('../images/gradient.png');
-    background-color: var(--primary);
+.section {    background-color: var(--primary);
     background-size: 100vw 100%;
     max-width: 600px;
     padding: 10px;

@@ -8,7 +8,6 @@
     width: 100%;
     z-index: 3;
     background-color: var(--primary);
-    lbackground-image: url('../images/gradient.png');
     background-size: 100vw var(--navbar-height);
 }
 

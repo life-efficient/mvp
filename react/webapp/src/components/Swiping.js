@@ -7,8 +7,6 @@ import cross from "../images/icons/cross-filled.png"
 import { connect } from "react-redux";
 import Loading from "../general/Loading"
 
-require.context('../images/product-marquee')
-
 class Swiping extends Component {
     constructor(props) {
         super(props)
