@@ -23,7 +23,7 @@
 }
 
 .shine {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
   width: 30px;
   height: 100%;
   position: absolute;
@@ -37,7 +37,7 @@
 @keyframes shine {
   100% {
     transform: translateX(80vw) skewX(-30deg);
-    background-color: rgba(0, 0, 0, 0)
+    background-color: var(--white);
   }
 }
 
@@ -265,4 +265,30 @@
   100% {
     transform: translateX(-100vw)
   }
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/realhero.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  font-family: var(--font1);
+  text-align: top;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: black;
 }

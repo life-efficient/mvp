@@ -40,7 +40,7 @@ export class ProtectedRoute extends Component {
             render = { props => (
                 this.state.user ?
                 <Component {...props} /> :
-                <Redirect to={{pathname: `/login` + window.location.search, state: {from: window.location.pathname}}}/>
+                <Redirect to={{pathname: `/app` + window.location.search, state: {from: window.location.pathname}}}/>
             )} 
             />
         )

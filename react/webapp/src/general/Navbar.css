@@ -4,7 +4,7 @@
 
 .navbar {
     background-size: 100vw var(--navbar-height);
-    background-color: var(--secondary);
+    background-color: var(--white);
     font-family: var(--font2);
     height: var(--navbar-height);
     font-size: 4vw;

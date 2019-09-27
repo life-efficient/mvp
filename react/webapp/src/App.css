@@ -92,12 +92,6 @@ button {
   padding: 10px;
   font-family: var(--font2)
 }
-/* 
-@media (max-width: 600px) {
-  .large {
-    font-size: 30px !important;
-  }
-}  */
 
 .panel {
     width: 100%;

@@ -110,6 +110,7 @@ const LandingContent = () => {
         <React.Fragment>
             <Provider store={store}>
                 <Navbar/>
+                <LandingRoutes/>
             </Provider>
         </React.Fragment>
     )

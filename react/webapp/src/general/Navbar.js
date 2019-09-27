@@ -19,7 +19,9 @@ class Navbar extends Component {
                         <img src={backArrow} alt="" className="back-arrow" onClick={() => {this.props.history.goBack()}}/>
                         <Link to={this.props.logged_in ? "/app" : "/"} className="navbar-logo-link" >
                             <img src={logo} className="navbar-logo" alt="" />
+
                         </Link>
+                        <h1> HEY ITS ROHAN</h1>
                     </div>
                 )
             default:
