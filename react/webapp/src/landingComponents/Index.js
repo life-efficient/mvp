@@ -1,20 +1,32 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
 import "./Index.css"
-import Button from "../general/Button"
 import { connect } from "react-redux"
-// import { Analytics } from "aws-amplify";
-import Navbar from "./Navbar"
-import Tabs from "../general/Tabs";
-
 
 class Home extends Component{
-    
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: null
+        }
+    }
 
     render() {
+        var tabs = [
+            {
+                'name': 'dist over days',
+                'to': '/posts_by_wkday'
+            },
+            {
+                'name': 'Student stats',
+                'to': '/student_stats'
+            }
+        ]
+        if (this.state.data) {
+            console.log(this.state.data)
+        }
         return (
             <>
-            </>            
+           </>
         )
     }
 }

@@ -31,7 +31,7 @@
 
 /*
 .login-panel {
-    background-color: var(--secondary);
+    background- 
     background-color: white;
     padding: 5vw 5vw;
     margin: auto;
@@ -77,4 +77,5 @@
     font-size: 10px;
     text-decoration: underline;
     cursor: pointer;
+    margin-bottom: 10px;
 }

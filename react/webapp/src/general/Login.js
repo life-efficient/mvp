@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./Login.css";
+import "./Login.css"
+import "./form_components/Forms.css"
 import logo from "../images/logo.png"
 import eye from "../images/see-icon.png"
 import { connect } from "react-redux"
@@ -8,8 +9,6 @@ import { Redirect } from "react-router-dom"
 import ChangePassword from "./ChangePassword"
 import Loading from "./Loading"
 import queryString from "query-string"
-import Dropdown from "../general/form_components/Dropdown";
-import Navbar from "../landingComponents/Navbar"
 
 class Login extends Component {
   constructor(props) {
@@ -37,6 +36,7 @@ class Login extends Component {
   }
 
   handleChange = event => {
+    if (event.target.id !== 'password') {event.target.value = event.target.value.toLowerCase()}
     this.setState({
       [event.target.id]: event.target.value
     },
@@ -116,7 +116,6 @@ class Login extends Component {
         return (
           <>
           {this.renderRedirect()}
-          <div className="body" style={{backgroundColor: 'var(--green)'}}>
             <div className="slide">
             <div className="form-container">
                 <img src={ logo } className="main-logo" alt="" />
@@ -126,18 +125,21 @@ class Login extends Component {
                     </div>
                     <input type="text" id="username" value={this.state.username} className="text-response" placeholder="" onChange={ this.handleChange }/>
                 </div>
-                <div className="field-container long-field-title">
+                <div className="field-container ">
                     <div className="field-title">
-                    <strong>Password</strong>
+                      <strong>Password</strong>
                     </div>
-                    <input type={ this.state.passwordFieldType } id="password" value={this.state.password} className="text-response" placeholder=""  onChange={ this.handleChange }/>
+                    <br/>
+                    <div className="password-field">
+                      <input type={ this.state.passwordFieldType } id="password" value={this.state.password} className="text-response" placeholder=""  onChange={ this.handleChange }/>
+                      <img src={ eye } id="passwordShow" className="btn passwordShow" onClick={ this.showPassword } alt="" />
+                    </div>
                   </div>
-                  <img src={ eye } id="passwordShow" className="btn passwordShow" onClick={ this.showPassword } alt="" />
                   <div className="form-error">{this.state.error}</div>
                   <div className="small get-details" onClick={() => {this.setState({panel: 'get-details'})}}>
                       Don't know your details?
                   </div>
-                  <button type="submit" onClick={this.handleSubmit}>
+                  <button className="submit-form" type="submit" onClick={this.handleSubmit}>
                       {
                         this.state.loading ?
                         <Loading /> :
@@ -147,7 +149,6 @@ class Login extends Component {
                 </div>
 
             </div>
-          </div>
           </>
         )
       case "changePassword":
@@ -171,26 +172,15 @@ class Login extends Component {
               <img src={ logo } className="main-logo" alt="" />
               <div className="field-container long-field-title">
                   <div className="field-title ">
-                      <strong>How are you in contact with adla?</strong>
+                      <strong>Enter your contact email</strong>
                   </div>
-                  <input className="text-response" prompt="Instagram" value={this.state.username} /> 
+                  <input className="text-response" prompt="email" value={this.state.username} /> 
               </div>
-              <div className="field-container long-field-title">
-                  <div className="field-title">
-                  <strong>Password</strong>
-                  </div>
-                  <input type={ this.state.passwordFieldType } id="password" value={this.state.password} className="text-response" placeholder=""  onChange={ this.handleChange }/>
-                </div>
-                <img src={ eye } id="passwordShow" className="btn passwordShow" onClick={ this.showPassword } alt="" />
-                <div className="form-error">{this.state.error}</div>
-                <div className="small get-details" onClick={() => {this.setState({panel: 'get-details'})}}>
-                    Don't know your details?
-                </div>
-                <button onClick={this.handleSubmit}>
+                <button className="submit-form" onClick={this.handleSubmit}>
                     {
                       this.state.loading ?
                       <Loading /> :
-                      "Submit"
+                      "Send verification code"
                     }
                 </button>
               </div>
@@ -206,10 +196,11 @@ class Login extends Component {
   render() {
     return (
       <>
-      <Navbar />
-      <div className="body">
-        {this.getPanel()}
-      </div>
+      {/* <Navbar /> */}
+          <div className="panel" >
+          {/* // style={{backgroundColor: 'var(--green)', width: '400px', margin: 'auto', padding: '20px'}}> */}
+            {this.getPanel()}
+          </div>
       </>
     )
   }

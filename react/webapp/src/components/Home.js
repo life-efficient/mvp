@@ -1,13 +1,11 @@
 import React, { Component } from "react"
+import Navbar from "./Navbar"
 import Section from "../general/Section"
-import { Route, Link } from "react-router-dom"
 import "./store.css"
-
 
 export default class Home extends Component {
     constructor(props) {
         super(props)
-        var{ path } = this.props.match
     }
 
     componentDidMount = () => {
@@ -15,13 +13,30 @@ export default class Home extends Component {
     }
 
     render() {
+        var sections = [
+            {
+                to: "/app/profile/analytics",
+                title: "Analytics"
+            },
+            {
+                to: "/app/enter_ig",
+                title: "Users enter instagram"
+            },
+            {
+                to: "/app/give_code",
+                title: "Give code"
+            }
+        ].map(
+            (s, idx) => {
+                return <Section to={s.to} title={s.title} caption={s.caption} idx={idx} />
+            }
+        )
         return (
-            <div className="body">
+            <>
+                <Navbar />
                 <div className="panel-title">Home</div>
-                <div className="panel-caption">Track your requests or save inspiration and outfits on your styleboards</div>
-                <Section to="/app/home/requests" title="My requests" caption="All the clothes you've used Adla to find" />
-                               
-            </div>
+                {sections}
+            </>
         )
     }
 }

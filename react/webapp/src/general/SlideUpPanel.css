@@ -1,5 +1,5 @@
 .SlideUpPanel {
-    background-color: var(--green);
+    background-color: var(--primary);
     width: 100vw;
     position: fixed;
     z-index: 5;

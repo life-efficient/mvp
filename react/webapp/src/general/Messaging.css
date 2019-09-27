@@ -21,8 +21,8 @@
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--secondary) ;
+     color: black;
     display: inline-block;
 }
 

@@ -26,17 +26,21 @@
   --grey: #707070;
   --navy: #1E144D;
 
-  --gradient-url: url('/images/');
+  --gradient-url: url('/images/gradient.png');
 
   /* BKGD */
-  --primary: white;
-  --secondary: black;
-  /* --secondary: white; */
+  --primary: #ffc700;
+  --secondary: #1ce8ff;
   --tertiary: var(--black);
+
+  --primary_grad: #dfae00;
+  --secondary_grad: #00cae0;
 
   /* FONTS */
   --font1: "Titling Gothic FB Wd Bd";
   --font2: 'Archivo Black';
+  --font2: "Titling Gothic FB Wd Bd";
+  --font2: comfortaa;
   --font3: montserrat;
   --font3: poppins;
 
@@ -57,7 +61,7 @@
   /* MISC */
   text-align: center;
   --shadow-depth: 4px;
-  --border-radius: 5px;
+  --radius: 4px;
 
   --navbar-height: 8vh;
   --tab-height: 8vh;
@@ -75,14 +79,15 @@
 }
 
 html {
-  color: var(--nude);
   color: black;
+  font-family: var(--font1);
 }
 
-a:link { color: var(--primary);text-decoration: none; }
-a​:visited { color: var(--primary); text-decoration: none;}
-a​:hover { color: var(--primary); }
-a {color: var(--primary);}
+/* a:link {  color: black;text-decoration: none; } */
+a:link { color: black;text-decoration: none; }
+/* a​:visited {  color: black; text-decoration: none;} */
+/* a​:hover {  color: black; } */
+/* a { color: black;} */
 
 button {
   background-color: var(--primary);
@@ -100,17 +105,20 @@ button {
 }  */
 
 .panel {
+    font-family: var(--font1);
     width: 100%;
-    background-color: var(--primary);
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    background: linear-gradient(var(--secondary), var(--secondary_grad));
+    margin: 20px auto;
     width: 80vw;
     max-width: 400px;
     border-radius: 3px;
     padding: 20px;
-    color: var(--secondary);
+     
     position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .large {
@@ -140,7 +148,7 @@ font-weight: 700;
   width: 100%;
   overflow-x: hidden;
   background-color: linear-gradient(0deg, var(--purple) 10%, var(--yellow) 90%) fixed;
-  background-color: var(--secondary);
+  /* background-  */
   z-index: -10px;
   position: relative;
 }

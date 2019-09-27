@@ -19,7 +19,7 @@
 }
 
 .loading > * {
-    background-color: var(--primary);
+    background-color: black;
 }
 
 .loading-segment {

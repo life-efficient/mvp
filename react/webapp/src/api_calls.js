@@ -13,13 +13,12 @@ export const makeGetRequest = (endpoint, callback, handleErr=(err)=>{console.log
                     'Content-Type': 'application/json'
                 }
             }
-            var url = `https://ikpilfsw9a.execute-api.eu-west-2.amazonaws.com/prod/${endpoint}`
+            var url = `https://46zwadhds2.execute-api.eu-west-2.amazonaws.com/prod/${endpoint}`
             console.log('Making request to:', url)
             fetch(url, options)
             .then(
                 (data) => {
                     console.log(`Response from ${endpoint}:`)
-                    // console.log('RAW RESPONSE:', data)
                     data = data.json()
                     console.log('RESPONSE JSON:', data)
                     return data
@@ -56,14 +55,15 @@ export const makePostRequest = (endpoint, body, callback, handleErr=(err)=>{cons
                     'Content-Type': 'application/json'
                 }
             }
-            var url = `https://ikpilfsw9a.execute-api.eu-west-2.amazonaws.com/prod/${endpoint}`
-            // console.log('Making request to:', url)
+            var url = `https://46zwadhds2.execute-api.eu-west-2.amazonaws.com/prod/${endpoint}`
+            console.log('Making request to:', url)
             fetch(url , options) 
             .then(
                 (data) => {
                     // console.log(`Response from ${endpoint}:`)
                     // console.log('RAW RESPONSE:', data)
                     // console.log('RESPONSE JSON:', data)
+                    data = data.json()
                     return data
                 }
             )

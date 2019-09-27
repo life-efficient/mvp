@@ -12,7 +12,7 @@ Amplify.configure({
     Auth: {
 
         // REQUIRED only for Federated Authentication - Amazon Cognito Identity Pool ID
-        identityPoolId: 'eu-west-2:940e23f6-b3b1-4200-8a9d-3729fa5e7d97',
+        // identityPoolId: 'eu-west-2:855cf335-a3b7-4b7f-b47d-dc9fd044bd9b',
         
         // REQUIRED - Amazon Cognito Region
         region: 'eu-west-2',
@@ -22,10 +22,10 @@ Amplify.configure({
         //identityPoolRegion: 'eu-west-2',
 
         // OPTIONAL - Amazon Cognito User Pool ID
-        userPoolId: 'eu-west-2_x5atHpPTt',
+        userPoolId: 'eu-west-2_GcInwIQL0',
 
         // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
-        userPoolWebClientId: '4o2q5borbhu94o7ve9tskjm0ic',
+        userPoolWebClientId: '5h9su4gmb1fkkfcims9dluhq1r',
 
         // OPTIONAL - Enforce user authentication prior to accessing AWS resources or not
         mandatorySignIn: true
@@ -37,10 +37,6 @@ Amplify.configure({
         }
     }
 });
-
-
-
-
 
 class App extends Component {
 
@@ -57,7 +53,6 @@ class App extends Component {
                 <div className="App">
                     <Switch>
                         <ProtectedRoute path="/app" component={AppContent}/>
-
                         <Route path="/" component={LandingContent} />
                         <Route component={NotFound} path=""/> 
                     </Switch>
@@ -67,4 +62,4 @@ class App extends Component {
     }
 }
 
-export default App;//withAuthenticator(App);
+export default App;

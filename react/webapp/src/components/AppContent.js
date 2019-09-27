@@ -1,14 +1,12 @@
 import React from "react"
 import { Route, Redirect } from "react-router-dom"
-import Navbar from "../general/Navbar"
 import SideNav from "../general/SideNav"
 import Home from "./Home";
-import Help from "../landingComponents/Help"
 import Modal from "../general/Modal"
 import { combineReducers, createStore } from "redux"
 import { Provider } from "react-redux"
 import { makeGetRequest } from "../api_calls";
-import SlideUpPanel from "../general/SlideUpPanel";
+import Notification from "../general/Notification"
 
 const slideUp = (state={open: false, content: null}, action) => {
     switch (action.type) {
@@ -92,11 +90,30 @@ const sideNav = (state = {open: false}, action) => {
     }
 }
 
+const notify = (state={show: false}, action) => {
+    switch (action.type) {
+        case "NOTIFY":
+            console.log('notifying')
+            return {
+                show: true,
+                content: action.content
+            }
+        case "HIDE_NOTIFY":
+            return {
+                show: false,
+                content: null
+            }
+        default:
+            return state
+    }
+}
+
 const reducer = combineReducers({
     modal,
     slideUp,
     user,
-    sideNav
+    sideNav,
+    notify
 })
 
 const store = createStore(reducer)
@@ -115,55 +132,22 @@ const AppRoutes = () => {
     )
     return (
         <React.Fragment>
-            <Route path="/app" exact render={() => <Redirect to="/app/profile" />} />
+            <Route path="/app" exact render={() => <Redirect to="/app/home" />} />
             <Route path="/app/home" exact component={Home} />
-            <Route path="/app/profile/brands" exact render={() => {return (
-                <>
-                <Navbar back={true} />
-                </>
-            )}} />
-            <Route path="/app/profile/swipe" exact render={() => {return (
-                <>
-                <Navbar back={true} />
-                <div className="body" style={{backgroundColor: '#89C497'}}>f
-                </div>
-                </>
-            )}} />
-            <Route path="/app/help" exact component={Help} />
-            <Route path="/app/profile/new_request" exact render={() => {return (
-                <>
-                <Navbar back={true} />
-                <div className="body" style={{backgroundColor: '#EA653C'}}>
-                    <div className="panel">
-                        <div className="form-container">
-                        </div>
-                    </div>
-                </div>
-                </>
-            )}} 
-            />
         </React.Fragment>
     )
 }
 
 const AppContent = () => {
-    console.log('getting dets')
-    makeGetRequest('user/details',
-        (update) => {
-            update = update.body
-            console.log(update)
-            update = JSON.parse(update)
-            console.log('got update info')
-            console.log(update)
-            store.dispatch({type: 'SET_USER', update})
-        }
-    )
     return (
         <React.Fragment>
             <Provider store={store}>
+                <div className="body" style={{height: '100vh'}}>
+
                 <AppRoutes />
+                </div>
+                <Notification />
                 <SideNav />
-                {/* <Tabs /> */}
                 <Modal />
             </Provider>
         </React.Fragment>
