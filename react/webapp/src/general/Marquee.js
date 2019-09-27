@@ -1,5 +1,5 @@
 import React from "react"
-import "./ProductMarquee.css"
+import "./Marquee.css"
 
 function importAll(r) {
   let images = {};

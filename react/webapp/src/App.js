@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Amplify from 'aws-amplify';
 import { BrowserRouter as Router, Switch, Route, Match } from "react-router-dom"
-import SideNav from "./components/SideNav";
-import { createStore, combineReducers } from "redux"
-import Modal from "./components/Modal"
 import AppContent from "./components/AppContent"
 import LandingContent from "./landingComponents/LandingContent"
 import { ProtectedRoute, StylistProtectedRoute ,AdminProtectedRoute } from "./CustomRoutes"

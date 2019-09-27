@@ -1,20 +1,9 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
 import "./Index.css"
-import Button from "./Button"
 import { connect } from "react-redux"
-import ProductMarquee from "./ProductMarquee"
 import { Analytics } from "aws-amplify";
 import Footer from "../landingComponents/Footer"
-import TestimonialMarquee from "./TestimonialMarquee"
-import chat from "../images/icons/chat.svg"
-import top from "../images/icons/top.png"
-import delivery from "../images/icons/delivery.png"
-import Signup from "./Signup"
 import LandingNavbar from "../landingComponents/Navbar"
-import fire from "../images/misc/fire.gif"
-import snoop from "../images/misc/snoop.gif"
-import cash from "../images/misc/cash.gif"
 
 
 const useScroll = () => {

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "./Index.css"
-import Button from "../components/Button"
+import Button from "../general/Button"
 import { connect } from "react-redux"
 // import { Analytics } from "aws-amplify";
 import Navbar from "./Navbar"

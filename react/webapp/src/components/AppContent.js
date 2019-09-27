@@ -1,14 +1,14 @@
 import React from "react"
 import { Route, Redirect } from "react-router-dom"
-import Navbar from "./Navbar"
-import SideNav from "./SideNav"
+import Navbar from "../general/Navbar"
+import SideNav from "../general/SideNav"
 import Home from "./Home";
 import Help from "../landingComponents/Help"
-import Modal from "./Modal"
+import Modal from "../general/Modal"
 import { combineReducers, createStore } from "redux"
 import { Provider } from "react-redux"
 import { makeGetRequest } from "../api_calls";
-import SlideUpPanel from "./SlideUpPanel";
+import SlideUpPanel from "../general/SlideUpPanel";
 
 const slideUp = (state={open: false, content: null}, action) => {
     switch (action.type) {

@@ -5,7 +5,7 @@ import { makePostRequest, makeGetRequest } from "../api_calls"
 import heart from "../images/icons/heart.png"
 import cross from "../images/icons/cross-filled.png"
 import { connect } from "react-redux";
-import Loading from "../general/Loading"
+import Loading from "./Loading"
 
 class Swiping extends Component {
     constructor(props) {

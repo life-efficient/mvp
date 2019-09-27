@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Section from "./Section"
+import Section from "../general/Section"
 import { Route, Link } from "react-router-dom"
 import "./store.css"
 

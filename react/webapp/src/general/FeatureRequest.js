@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Loading from "../general/Loading"
+import Loading from "./Loading"
 import sendIcon from "../images/icons/send.svg"
 import { makePostRequest } from "../api_calls"
 
