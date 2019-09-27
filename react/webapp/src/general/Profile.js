@@ -1,60 +1,109 @@
 import React, { Component } from "react"
-//import { Route, Link } from "react-router-dom"
-import "./store.css"
-import Section from "./Section"
 import Navbar from "./Navbar"
+import Style from "../components/Style"
+import "./Profile.css"
+import uuid from "uuid"
+import { connect } from "react-redux"
+import default_dp from "../images/misc/default-profile.png"
+import { makePostRequest } from "../api_calls"
+import { Storage } from "aws-amplify"
+import StylistStats from "./StylistStats"
+import FeatureRequest from "./FeatureRequest"
+import Bio from "./Bio"
 
-export default class Profile extends Component {
-    componentDidMount = () => {
-        window.analytics.page('profile')
+class Profile extends Component {
+
+    uploadDP = (e) => {
+        console.log('uploading')
+        return new Promise(
+            (resolve, reject) => {
+                var type
+                var url
+                var fp
+        var file = e.target.files[0]
+                type = file.type.split('/')[1]
+                fp = `recommended_items/${uuid.v4()}.${type}`
+                var mimeType 
+                if (type == 'png') {
+                    mimeType = 'image/png'
+                }
+                else if (type == 'jpg' || type == 'jpeg') {
+                    mimeType = 'image/jpeg'
+                }
+                else {
+                    alert('image type invalid (use .PNG, .JPG or .JPEG images)\nYou used type ' + type)
+                    return null
+                }
+                console.log('puttin')
+                Storage.put(fp, file, {contentType: mimeType})
+                .then(
+                    () => {
+                        url =`https://s3-eu-west-1.amazonaws.com/adla-data/public/${fp}`
+                        this.props.setStylistInfo({display_pic: url})
+                    }
+                )
+                .catch((err) => {alert('ERROR:', err)})
+                //.catch(reject(Error('The following file failed to upload:', files[i])))
+                }
+        )
     }
 
     render() {
-        var sections = [
-            {
-                to: "/app/profile/brands",
-                title: "Brands you love"
-            },
-            {
-                to: "/app/profile/style",
-                title: "My style and preferences",
-                caption: "Love vintage? Hate velvet?" 
-            },
-            {
-                to: "/app/profile/new_request",
-                title: "What are you looking for?",
-                caption: 'Wanna find something specific'
-            },
-        ].map(
-            (s, idx) => {
-                return <Section to={s.to} title={s.title} caption={s.caption} idx={idx} />
-            }
-        )
+        // console.log('USER:', this.props.user)
+        console.log('profile styles:', this.props.user)
         return (
             <>
-            <Navbar />
-            <div className="body" style={{backgroundColor: '#c6e0f5'}}>
-                <div className="panel-title">Your profile</div>
-                <div className="panel-caption">Fill in any details about your style so I can find you exactly what you're after</div>
-                {sections}
-                <div className="medium" style={{fontSize: '20px', margin: '20px', marginTop: '100px'}}>
-                    <strong>
-                        Where's my recommendations?
-                        <br/>
-                        <div className="small">
-                            Keep an eye on your instagram DM requests.
-                            <br/>
-                            I'll chat to you and send you recommendations over instagram. 
-                        </div>
-                        ➡️📱
-                        <br/> 
-                        {/* <div className="small">
-                            @adla.site
-                        </div> */}
-                    </strong>
+            <Navbar back={true} />
+            <div className="body" style={{backgroundColor: '#89C497'}}>
+                <div className="large">
+                    My profile
                 </div>
+                <div className="dp-container">
+                    <label for="dp-input" className="dp-input">
+                        <input onChange={this.uploadDP} id="dp-input" type="file" style={{display: 'none'}} />
+                        <img src={this.props.dp_url ? this.props.dp_url : default_dp} className="display-pic" alt=""/>
+                    </label>
+                </div>
+                <Bio bio={this.props.user.bio}/>
+                <StylistStats user={this.props.user}/>
+                <Style styles={this.props.user}
+                //  endpoint='stylist-my-info'
+                onChange={(styles) => {
+                    this.props.setStylistInfo({styles});
+                    makePostRequest('stylist-my-info', {styles}, 
+                        () => {console.log('dets updated')}
+                    )
+                }}
+                 />
+                <FeatureRequest />
             </div>
             </>
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    // console.log(state.user)
+    return {
+        dp_url: state.user.display_pic,
+        user: state.user
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setStylistInfo: (update) => {
+            makePostRequest('stylist-my-info', update,
+                () => {
+                    console.log('user updated')
+                }
+            )
+            dispatch({
+                type: "SET_USER",
+                update: update
+            })
+        }
+    }
+}
+
+export default Profile = connect(mapStateToProps, mapDispatchToProps)(Profile)
