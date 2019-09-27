@@ -10,7 +10,7 @@
   font-family: var(--title-font);
   padding: 10px;
   cursor: pointer;
-  background-color: var(--primary);
+  background-color: black;
   background-size: 100vw var(--navbar-height);
   overflow: hidden;
   color: black !important;

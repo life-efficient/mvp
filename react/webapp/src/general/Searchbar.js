@@ -3,7 +3,7 @@ import "./Searchbar.css"
 import searchIcon from "../images/icons/search.png"
 import Loading from "./Loading";
 import { makePostRequest } from "../api_calls"
-import User from "../adminComponents/User"
+import User from "./User"
 
 class Searchbar extends Component {
     constructor(props) {

@@ -1,0 +1,115 @@
+.swipe_cards {
+    height: 55vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.swipe_card {
+    position: absolute;
+    background-color: black;
+    height: 50vh;
+    width: 270px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    transition-duration: 0.2s;
+}
+
+.swipe_card > img {
+    height: 100%;
+    width: auto;
+}
+
+.swipe_options {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swipe_options > .swipe_like_btn, .swipe_dislike_btn {
+    --s_o_diam: 60px;
+    height: var(--s_o_diam);
+    min-width: var(--s_o_diam);
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.swipe_like_btn > img {
+    height: 40px;
+    width: 40px;
+    margin: auto;
+}
+
+.swipe_dislike_btn > img {
+    height: 35px;
+    width: 35px;
+    margin: auto;
+}
+
+.yes {
+    animation: swipe_right 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation: swipe_right 2s;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes swipe_right {
+    100% {
+        transform: translateX(3000px) rotate(180deg);
+    }
+}
+@-webkit-keyframes swipe_right {
+    100% {
+        transform: translateX(3000px) rotate(180deg);
+    }
+}
+
+.no {
+    animation: swipe_left 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation: swipe_left 2s;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes swipe_left {
+    100% {
+        transform: translateX(-3000px) rotate(-180deg);
+    }
+}
+@-webkit-keyframes swipe_left {
+    100% {
+        transform: translateX(-3000px) rotate(-180deg);
+    }
+}
+
+.centre {
+    animation: to_centre 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation: to_centre 0.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes to_centre {
+    100% {
+        transform: translateX(0px);
+    }
+}
+@-webkit-keyframes to_centre {
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.centre {
+    
+}

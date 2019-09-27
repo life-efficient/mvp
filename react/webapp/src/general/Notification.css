@@ -6,11 +6,11 @@
     right: 0;
     width: 500px;
     max-width: 90vw;
-    background-color: #1e144d;
-    background-color: var(--primary);
+    background: linear-gradient(var(--secondary), var(--secondary_grad));
+    font-family: var(--font1);
     padding: 20px;
     border-radius: var(--border-radius);
     transition-duration: 0.5s;
-    color: var(--secondary);
+     
     box-shadow: var(--shadow);
 }

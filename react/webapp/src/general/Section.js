@@ -6,6 +6,7 @@ import { connect } from "react-redux"
 import { withRouter } from "react-router-dom"
 
 class Section extends Component {
+
     render() {
         return (
             <Link to={{

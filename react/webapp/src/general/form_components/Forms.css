@@ -5,6 +5,8 @@
     transition: all 0.3s;
     background-color: white;
     width: 100%;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
 
     font-family: var(--font3);
     font-size: var(--small);
@@ -12,12 +14,25 @@
     resize: none;
     text-align: center;
     overflow: visible;
-    margin: 20 auto;
+    margin-bottom: 10px;
 
     text-align: justify;
-    -moz-text-align-last: center; /* Firefox 12+ */
-    text-align-last: center;
-    padding: 5px;
+    padding: 5px 10px;
+    border-radius: var(--radius);
+}
+
+.password-field {
+    display: flex;
+}
+
+.password-field > img {
+    margin-bottom: 10px !important;
+    margin-left: 10px !important;
+}
+
+.submit-form {
+    width: 100%;
+    max-width: 300px;
 }
 
 .quiz_card > img {
@@ -117,7 +132,16 @@
     font-size: 10px;
     text-decoration: underline;
     transform: translateY(40px) translateX(3px);
-    cursor: pointer;
+}
+
+.field-title {
+    font-family: var(--font2);
+    float: left;
+}
+
+.field-container {
+    padding: 10px;
+    max-width: 300px;
 }
 
 .form-title, .form-caption {

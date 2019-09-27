@@ -1,7 +1,9 @@
 .body {
-    padding: 10px 0;
     box-sizing: border-box;
     min-height: 92vh;
+     
+    /* background-color: var(--primary); */
+    background: linear-gradient(var(--primary), var(--primary_grad));
     /* top: var(--navbar-height); */
     overflow-x: hidden;
     position: absolute;

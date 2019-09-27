@@ -1,0 +1,64 @@
+:root {
+    --mobile: 480px;
+}
+
+.navbar {
+    background-size: 100vw var(--navbar-height);
+    background-color: var(--secondary) ;
+    background: linear-gradient(var(--secondary), var(--secondary_grad));
+ 
+    font-family: var(--font2);
+    height: var(--navbar-height);
+    font-size: 4vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    width: 100%;
+    z-index: 1;
+    /* position: fixed; */
+    position: relative;
+}
+
+.navbar-menu-btn {
+    cursor:pointer;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--navbar-height);
+    float: left;
+}
+
+
+.navbar-logo {
+    height: 100%;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    /* padding: 20px; */
+    float: right;
+    
+}
+
+.navbar-logo-link {
+    height: 100%;
+}
+
+.back-arrow {
+    width: 60px;
+    height: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+    .navbar {
+        height: var(--desktop-navbar-height);
+    }
+    .navbar-menu-btn {
+        width: var(--desktop-navbar-height);
+    }
+    .navbar-logo {
+        /* height: var(--desktop-navbar-height); */
+    }
+}

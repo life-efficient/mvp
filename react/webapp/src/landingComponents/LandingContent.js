@@ -7,7 +7,6 @@ import NotFound from "../general/NotFound";
 import { combineReducers, createStore } from "redux"
 import { Provider } from "react-redux"
 import Navbar from "./Navbar";
-import Tabs from "../general/Tabs"
 
 const slideUp = (state={open: false, content: null}, action) => {
     switch (action.type) {
@@ -98,19 +97,35 @@ const LandingRoutes = () => {
     return (
         <Switch>
           <Route path="/" exact component={Index} />
+          {/* <Route path="/posts_by_wkday" component={PostsByWkday} /> */}
+          {/* <Route path={'/metrics'} component={PostsByWkday} /> */}
           <Route path="/login" component={Login} />
           <Route path="/help" exact component={Help} />
           <Route component={NotFound} path=""/> 
+
         </Switch>
     )
 }
 
 const LandingContent = () => {
+    var tabs = [
+        {
+            'name': 'Posting stats',
+            'to': '/posts_by_wkday'
+        },
+        {
+            'name': 'Student stats',
+            'to': '/student_stats'
+        }
+    ]
     return (
         <React.Fragment>
             <Provider store={store}>
                 <Navbar/>
-                <LandingRoutes/>
+                <div style={{backgroundColor: 'var(--primary)', minHeight: '92vh', display: 'flex', justifyContent: 'center'}}>
+                <LandingRoutes />
+
+                </div>
             </Provider>
         </React.Fragment>
     )

@@ -24,7 +24,7 @@
     background-color: transparent;
     border-right: inherit;
     box-sizing: border-box;
-    color: var(--secondary);
+     
     display: flex;
     overflow: hidden;
     width: 100px;
@@ -43,7 +43,7 @@
     max-height: 300px;
     box-sizing: border-box;
     padding: 0px;
-    color: var(--secondary);
+     
     z-index: 10;
 }
 

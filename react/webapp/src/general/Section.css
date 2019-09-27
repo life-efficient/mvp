@@ -1,4 +1,9 @@
-.section {    background-color: var(--primary);
+.section {
+    background-color: var(--secondary) ;
+    background: linear-gradient(var(--secondary), var(--secondary_grad));
+ 
+     color: black;
+
     background-size: 100vw 100%;
     max-width: 600px;
     padding: 10px;
@@ -8,6 +13,7 @@
     justify-content: space-between;
     animation: slide-in 0.5s ease-out;
     animation-fill-mode: both;
+    box-shadow: var(--shadow);
 }
 
 @keyframes slide-in {
@@ -21,7 +27,7 @@
 
 @media (min-width: 600px) {
     .section {
-        border-radius: 10px;
+        border-radius: var(--radius);
         /* border: 2px solid black; */
         margin-bottom: 10px;
     }
@@ -30,7 +36,7 @@
 .section > div {
     display: flex;
     flex-direction: column;
-    color: black;
+    /* color: black; */
 }
 
 .section-title {
