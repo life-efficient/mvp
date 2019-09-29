@@ -115,7 +115,7 @@ class Login extends Component {
       case "login":
         return (
           <>
-          {this.renderRedirect()}
+          {/* {this.renderRedirect()} */}
             <div className="slide">
             <div className="form-container">
                 <img src={ logo } className="main-logo" alt="" />
