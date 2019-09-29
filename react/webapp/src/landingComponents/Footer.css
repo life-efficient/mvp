@@ -1,17 +1,27 @@
-.landing-footer {
+.landing-footer{
      color: black;
     display: flex;
-    align-items: center;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
     bottom: 0;
     font-size: 14px;
+    font-family: var(--font2);
+}
+.one{
+    display: flex;
+}
+.two{
+    display: flex;
+}
+.three{
+    display: flex;
 }
 
-.landing-footer > * {
+.laxnding-footer > * {
     display: flex;
     flex-direction: column;
     text-align: left;
     height: 100%;
+    float:left;
 }

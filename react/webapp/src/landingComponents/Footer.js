@@ -8,9 +8,9 @@ const Footer = () => {
     return (
         <div className="landing-footer small" >
             <div>
-                <div>contact:</div>
-                <div>ice@stint.co</div>
-                <div>+447765892392</div>
+                <div className="one">contact:</div>
+                <div className="two">ice@stint.co</div>
+                <div className="three">+447765892392</div>
             </div>
             {/* <div style={{textAlign: 'right'}}>
                 <div>777 Hamilton Ave</div>

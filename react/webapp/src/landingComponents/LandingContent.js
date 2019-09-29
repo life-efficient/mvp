@@ -6,6 +6,7 @@ import Help from "./Help"
 import NotFound from "../general/NotFound";
 import { combineReducers, createStore } from "redux"
 import { Provider } from "react-redux"
+import Footer from"./Footer"
 import Navbar from "./Navbar";
 
 const slideUp = (state={open: false, content: null}, action) => {
@@ -108,22 +109,13 @@ const LandingRoutes = () => {
 }
 
 const LandingContent = () => {
-    var tabs = [
-        {
-            'name': 'Posting stats',
-            'to': '/posts_by_wkday'
-        },
-        {
-            'name': 'Student stats',
-            'to': '/student_stats'
-        }
-    ]
     return (
         <React.Fragment>
             <Provider store={store}>
                 <Navbar/>
                 <div style={{backgroundColor: 'var(--primary)', minHeight: '92vh', display: 'flex', justifyContent: 'center'}}>
                 <LandingRoutes />
+                <Footer/>
 
                 </div>
             </Provider>

@@ -1,39 +1,21 @@
 import React, { Component } from "react"
 import "./Index.css"
 import { connect } from "react-redux"
+import hero from "../images/realhero.jpg"
 
 class Home extends Component{
     constructor(props) {
         super(props)
-        this.state = {
-            data: null
-        }
     }
 
     render() {
-        var tabs = [
-            {
-                'name': 'dist over days',
-                'to': '/posts_by_wkday'
-            },
-            {
-                'name': 'Student stats',
-                'to': '/student_stats'
-            }
-        ]
-        if (this.state.data) {
-            console.log(this.state.data)
-        }
         return (
-<<<<<<< HEAD
-            <div>
-                <img src={realhero} className="hero-image" alt="" />   
-                <h1 className = "hero-text">GOURMET</h1>       
-            </div> 
-=======
-            <>
-           </>
->>>>>>> cecf45ff1e7519aebbd624c0572bf451b990d64f
+            <div className="hero-image">
+                <div className="hero-text">
+                    <div className="title-text">GOURMET</div>
+                    <p className="bullet-text"> Have you ever had money and spent it unwisely. Have you ever not hand money and spent it unwisely. Life is full of poor choices. Make a smart one, by choosing gourmet food today. No taste buds, no problem.</p>
+                </div>
+            </div>
         )
     }
 }
