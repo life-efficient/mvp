@@ -12,8 +12,10 @@ class Home extends Component{
         return (
             <div className="hero-image">
                 <div className="hero-text">
-                    <div className="title-text">GOURMET</div>
-                    <p className="bullet-text"> Have you ever had money and spent it unwisely. Have you ever not hand money and spent it unwisely. Life is full of poor choices. Make a smart one, by choosing gourmet food today. No taste buds, no problem.</p>
+                    <div className="title-text">{window.title}</div>
+                    <p className="subtitle-text"> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
                 </div>
             </div>
         )

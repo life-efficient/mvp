@@ -38,6 +38,8 @@ Amplify.configure({
     }
 });
 
+window.title = 'your title'
+
 class App extends Component {
 
     constructor(props) {

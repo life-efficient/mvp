@@ -113,10 +113,9 @@ const LandingContent = () => {
         <React.Fragment>
             <Provider store={store}>
                 <Navbar/>
-                <div style={{backgroundColor: 'var(--primary)', minHeight: '92vh', display: 'flex', justifyContent: 'center'}}>
-                <LandingRoutes />
-                <Footer/>
-
+                <div className="body no-tabs">
+                    <LandingRoutes />
+                    <Footer/>
                 </div>
             </Provider>
         </React.Fragment>

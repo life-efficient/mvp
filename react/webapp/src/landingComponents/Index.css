@@ -272,7 +272,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/realhero.jpg");
 
   /* Set a specific height */
-  height: 84vh;
+  height: 92vh;
   width: 100%;
 
   /* Position and center the image to scale nicely on all screens */
@@ -286,22 +286,16 @@
 .hero-text {
   font-family: var(--font1);
   text-align: left;
-  position:absolute;
-  top:36%;
-  padding-left: 60%;
+  padding: 50px;
   font-size: 100px;
-  transform: translate(-50%, -50%);
   color: black;
+  max-width: 80%;
 }
 
-.bullet-text  {
+.subtitle-text  {
   font-family: var(--font2);
-  left: 70%;
-  padding:0px;
-  text-align: left;
   font-size: 30px;
-  color: whitesmoke;
 }
 .title-text {
-  margin-bottom:100px;
+  margin-bottom:50px;
 }

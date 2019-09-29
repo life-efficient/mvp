@@ -2,12 +2,24 @@
      color: black;
     display: flex;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: space-between;
     position: absolute;
     bottom: 0;
     font-size: 14px;
     font-family: var(--font2);
+    height: 8vh;
+    width: 100%;
+    box-sizing: border-box; 
+    background: linear-gradient(var(--secondary), var(--secondary_grad))
 }
+
+.landing-footer > * {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
 .one{
     display: flex;
 }
@@ -16,12 +28,4 @@
 }
 .three{
     display: flex;
-}
-
-.laxnding-footer > * {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    height: 100%;
-    float:left;
 }

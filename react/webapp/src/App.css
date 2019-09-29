@@ -1,40 +1,14 @@
 :root {
   /* COLORS */
-  --purple: #fee2f8;
-  --violet:#ad82ce;
-  --blue:#8daae0;
-  --cream: #fff1d0;
-  --grey: grey;
-  --green: rgb(124, 194, 124);
-  --red: rgb(243, 89, 89);
-  --orange: #ff9933;
-  --nblue: #0066ff;
-  --white: white;
-  --beige: #e1c699;
-  --black: black;
-  --nude: #ebc8b2;
-  --nude: #fbf0d9;
-  --navy: #1E144D;
-  --coral: #ff7b67;
-
-  --nude: #FFFFFF;
-  --lilac: #BCA2F2;
-  --green: #89C497;
-  --pink: #FFC8DB;
-  --orange: #EA653C;
-  --blue: #C6E0F5;
-  --grey: #707070;
-  --navy: #1E144D;
-
-  --gradient-url: url('/images/gradient.png');
-
+  --black: #000000;
+  
   /* BKGD */
-  --primary: #ffc700;
-  --secondary: #1ce8ff;
+  --primary: #c5c5c5;
+  --secondary: #b4b2b2;
   --tertiary: var(--black);
 
-  --primary_grad: #dfae00;
-  --secondary_grad: #00cae0;
+  --primary_grad: #fafafa;
+  --secondary_grad: #ffffff;
 
   /* FONTS */
   --font1: "Titling Gothic FB Wd Bd";
@@ -113,6 +87,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: var(--shadow);
 }
 
 .large {

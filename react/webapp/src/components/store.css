@@ -13,8 +13,12 @@
     background-size: 100vw 100vh;
     /* margin-bottom: 8vh; */
     width: 100%;
+    padding-bottom: 8vh;
     /* background-color: #BCA2F2; */
 }
+
+.body-no-tabs {
+ }
 
 .body > * {
     box-sizing: border-box;
