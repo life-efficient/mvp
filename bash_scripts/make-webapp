@@ -1,3 +1,0 @@
-npx create-react-app $1
-cp -r ~/mvp/react/webapp/* ./$1/
-#npm install aws-amplif
